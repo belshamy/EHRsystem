@@ -1,0 +1,289 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container-fluid px-0">
+        <div class="row min-vh-100 align-items-center">
+            <div class="col-lg-6 hero-content">
+                <div class="px-4 px-lg-5">
+                    <h1 class="hero-title mb-4">
+                        Advanced Electronic Health Records
+                        <span class="text-primary">Made Simple</span>
+                    </h1>
+                    <p class="hero-subtitle mb-4">
+                        Streamline patient care with our comprehensive EHR system. 
+                        Secure, efficient, and designed for modern healthcare providers.
+                    </p>
+                    <div class="hero-buttons">
+                        @if (User.Identity?.IsAuthenticated == true)
+                        {
+                            <a href="#dashboard" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-tachometer-alt me-2"></i>Go to Dashboard
+                            </a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-sign-in-alt me-2"></i>Sign In
+                            </a>
+                            <a asp-controller="Account" asp-action="Register" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-user-plus me-2"></i>Get Started
+                            </a>
+                        }
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="hero-stats mt-5">
+                        <div class="row">
+                            <div class="col-6 col-md-3">
+                                <div class="stat-item">
+                                    <h3 class="stat-number">50K+</h3>
+                                    <p class="stat-label">Patients</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="stat-item">
+                                    <h3 class="stat-number">1K+</h3>
+                                    <p class="stat-label">Providers</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="stat-item">
+                                    <h3 class="stat-number">99.9%</h3>
+                                    <p class="stat-label">Uptime</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="stat-item">
+                                    <h3 class="stat-number">24/7</h3>
+                                    <p class="stat-label">Support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 hero-visual">
+                <div class="hero-image">
+                    <div class="floating-cards">
+                        <div class="card floating-card card-1">
+                            <div class="card-body">
+                                <i class="fas fa-heartbeat text-danger mb-2"></i>
+                                <h6>Patient Vitals</h6>
+                                <div class="mini-chart"></div>
+                            </div>
+                        </div>
+                        <div class="card floating-card card-2">
+                            <div class="card-body">
+                                <i class="fas fa-calendar-check text-success mb-2"></i>
+                                <h6>Appointments</h6>
+                                <small class="text-muted">15 scheduled today</small>
+                            </div>
+                        </div>
+                        <div class="card floating-card card-3">
+                            <div class="card-body">
+                                <i class="fas fa-pills text-warning mb-2"></i>
+                                <h6>Prescriptions</h6>
+                                <small class="text-muted">3 pending approval</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Comprehensive Healthcare Management</h2>
+            <p class="section-subtitle">Everything you need to provide exceptional patient care</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h4>Patient Management</h4>
+                    <p>Complete patient profiles with medical history, demographics, and care plans all in one place.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h4>Appointment Scheduling</h4>
+                    <p>Smart scheduling system with automated reminders and seamless calendar integration.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-prescription-bottle-alt"></i>
+                    </div>
+                    <h4>E-Prescriptions</h4>
+                    <p>Digital prescription management with drug interaction checks and pharmacy integration.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Analytics & Reports</h4>
+                    <p>Comprehensive reporting and analytics to track practice performance and patient outcomes.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>HIPAA Compliance</h4>
+                    <p>Bank-level security with full HIPAA compliance and encrypted data protection.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>Mobile Access</h4>
+                    <p>Access patient data and manage your practice from anywhere with our mobile-responsive design.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@if (User.Identity?.IsAuthenticated == true)
+{
+    <!-- Dashboard Preview Section -->
+    <section id="dashboard" class="dashboard-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Your Dashboard</h2>
+                <p class="section-subtitle">Quick access to your most important information</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-calendar-day me-2"></i>Today's Schedule</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="appointment-item">
+                                <div class="appointment-time">09:00 AM</div>
+                                <div class="appointment-details">
+                                    <h6>John Doe - Annual Checkup</h6>
+                                    <small class="text-muted">Room 101</small>
+                                </div>
+                                <div class="appointment-status">
+                                    <span class="badge bg-success">Confirmed</span>
+                                </div>
+                            </div>
+                            <div class="appointment-item">
+                                <div class="appointment-time">10:30 AM</div>
+                                <div class="appointment-details">
+                                    <h6>Jane Smith - Follow-up</h6>
+                                    <small class="text-muted">Room 102</small>
+                                </div>
+                                <div class="appointment-status">
+                                    <span class="badge bg-warning">Waiting</span>
+                                </div>
+                            </div>
+                            <div class="appointment-item">
+                                <div class="appointment-time">02:00 PM</div>
+                                <div class="appointment-details">
+                                    <h6>Mike Johnson - Consultation</h6>
+                                    <small class="text-muted">Room 103</small>
+                                </div>
+                                <div class="appointment-status">
+                                    <span class="badge bg-primary">Scheduled</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="quick-stat-card">
+                                <div class="stat-icon bg-primary">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>247</h3>
+                                    <p>Total Patients</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="quick-stat-card">
+                                <div class="stat-icon bg-success">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>12</h3>
+                                    <p>Today's Appointments</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="quick-stat-card">
+                                <div class="stat-icon bg-warning">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>5</h3>
+                                    <p>Pending Tasks</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary btn-lg">
+                    <i class="fas fa-tachometer-alt me-2"></i>Go to Full Dashboard
+                </a>
+            </div>
+        </div>
+    </section>
+}
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="cta-title">Ready to Transform Your Practice?</h2>
+                <p class="cta-subtitle">Join thousands of healthcare providers who trust our EHR system</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                @if (User.Identity?.IsAuthenticated != true)
+                {
+                    <a asp-controller="Account" asp-action="Register" class="btn btn-light btn-lg">
+                        <i class="fas fa-rocket me-2"></i>Start Free Trial
+                    </a>
+                }
+                else
+                {
+                    <a href="#dashboard" class="btn btn-light btn-lg">
+                        <i class="fas fa-arrow-up me-2"></i>Back to Dashboard
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</section>
